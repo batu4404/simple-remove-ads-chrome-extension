@@ -14,7 +14,25 @@
         "persistent": false
     },
 
+    "options_page": "options.html",
+
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["content.js", "jquery-3.2.1.min.js"],
+            "css": ["content.css"],
+            "run_at": "document_start"
+        }
+    ],
+
     "permissions": [
-        "tabs"
+        "storage",
+        "notifications",
+        "contextMenus",
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "file:///*:/*",
+        "alarms"
     ]
 }

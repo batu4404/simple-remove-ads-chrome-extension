@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+
+    "name": "Remove advertisement blocks from a page",
+    "description": "Remove advertisement blocks from a page",
+    "version": "1.0.0",
+
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+
+    "background": {
+        "scripts": ["eventPage.js", "jquery-3.2.1.min.js"],
+        "persistent": false
+    },
+
+    "permissions": [
+        "tabs"
+    ]
+}
